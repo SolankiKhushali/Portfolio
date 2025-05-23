@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>  
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1 class="logo">Khushali Solanki</h1>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="themeToggle" class="toggle-btn">Toggle Theme</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <!-- <div data-aos="fade-up"> -->
+        <h1>Hello! I'm <span class="highlight">Khushali Solanki</span></h1>
+        <p>    <i class='bx bx-desktop'></i> Computer Engineer</p>
+        <a href="#projects" class="btn">View My Work</a>
+      <!-- </div> -->
+    </div>
+  </section>
+
+  <!-- about section -->
+  <section id="about" class="about" >
+    <div data-aos="fade-up">
+      <h2>About Me</h2>
+      <div class="about-container">
+        <div class="circle-img">
+          <img src="Portfolio_img.jpg" alt="Photo" />
+        </div>
+        <div class="about-text">
+          <p>
+            I'm an aspiring developer who enjoys building real-world projects and learning through hands-on experience. I’ve been exploring technologies like ASP.NET Core, Python, and Bootstrap, and I’m gradually becoming more confident with full-stack development. I recently worked on a few web apps that helped me understand how front-end and back-end systems connect. I’m still learning every day—debugging, improving my logic, and trying new tools as I go. I enjoy solving problems and turning ideas into working features, and I’m excited to keep growing as a developer.
+          </p>
+          <br>
+          <h3 data-aos="fade-up" data-aos-delay="100" class="github_link"><a href="https://github.com/SolankiKhushali"><i class='bx bxl-github'></i> Check out my GitHub!</a></h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- experince section -->
+  <section id="experience" class="experience">
+    <div data-aos="fade-up">
+    <h2>Experience</h2>
+    <div class="slider-container">
+      <div class="slider" id="experienceSlider">
+        <div class="slide">
+          <h3>Internship at Guj Info Petro Limited, Gandhinagar, Gujarat</h3>
+          <p><b><i class='bx bxs-calendar'></i>1<sup>st</sup> March 2025 to 31<sub>st</sub> May 2025</b></p>
+          <p>as an Intern, I gained hands-on experience in .Net Core MVC Full Stack development, <br>
+            enhancing my technical skills and contributing to meaningful projects</p>
+          <a href="#" class="btn certi-btn">Certificate</a>
+          <div class="overlay">
+            <div class="details-box">
+              <img src="gipl-img.png" alt="certi" />            
+              <div class="details-box-desc" >
+                <p>
+                  <b>
+                    Here are some project details.<br>
+                    You can explore further or go back.
+                  </b>  
+                </p>
+                <a href="https://github.com/SolankiKhushali?tab=repositories" class="details-box-btn" data-aos="fade-up" data-aos-delay="100">Show Projects</a>
+                <a href="#" class="go-back-btn details-box-btn" data-aos="fade-up" data-aos-delay="400">Go Back</a>
+              </div> 
+          </div>
+          </div>
+        </div>
+        <div class="slide">
+          <h3>Internship at OceanMTech Pvt Ltd, Ahmdabad, Gujarat</h3>
+          <p><b><i class='bx bxs-calendar'></i>29th June 2024 to 18th August 2024</b></p>
+          <p>as an Intern, I gained hands-on experience in Python Full Stack development, <br>
+            enhancing my technical skills and contributing to meaningful projects</p>
+          <a href="#" class="btn certi-btn">Certificate</a>
+          <div class="overlay">
+            <div class="details-box">
+              <img src="OMT-certi-img.png" alt="certi" />            
+              <div class="details-box-desc" >
+                <p>
+                  <b>
+                    Here are some project details.<br>
+                    You can explore further or go back.
+                  </b>
+                </p>
+                <a href="https://github.com/SolankiKhushali?tab=repositories" class="details-box-btn" data-aos="fade-up" data-aos-delay="100">Show Projects</a>
+                <a href="#" class="go-back-btn details-box-btn" data-aos="fade-up" data-aos-delay="400">Go Back</a>
+              </div> 
+          </div>
+          </div>
+        </div>
+        <div class="slide">
+          <h3>Internship at Devkishan Computer Pvt Ltd, Amreli, Gujarat</h3>
+          <p><b><i class='bx bxs-calendar'></i>29th June 2024 to 18th August 2024</b></p>
+          <p>Built Logo Designs, Web Designs, and Learn Adobe Photoshop Editing for <br>
+            Enhancing my designing skills.</p>
+          <a href="#" class="btn certi-btn">Certificate</a>
+          <div class="overlay">
+            <div class="details-box">
+              <img src="web-designing-certi-img.jpg" alt="certi" />            
+              <div class="details-box-desc" >
+                <p>
+                  <b>
+                    Here are some project details.<br>
+                    You can explore further or go back.
+                  </b>
+                </p>
+                <a href="https://github.com/SolankiKhushali?tab=repositories" class="details-box-btn" data-aos="fade-up" data-aos-delay="100">Show Projects</a>
+                <a href="#" class="go-back-btn details-box-btn" data-aos="fade-up" data-aos-delay="400">Go Back</a>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="nav prev" onclick="prevSlide()"><b><i class='bx bx-chevron-left'></i></b></button>
+      <button class="nav next" onclick="nextSlide()"><b><i class='bx bx-chevron-right'></i></b></button>
+    </div>
+  </div>
+  </section>
+
+  <!-- projects section -->
+  <section id="projects" class="projects">
+    <div data-aos="fade-up">
+      <h2>Projects</h2>
+      <!-- Project Cards -->
+      <div class="projects-content">
+        <div class="left-project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>1. WorkSync Hub</h3>
+            <h4>Tech: ASP .Net Core (C#), MySql, Bootstrap, JS, HTML, CSS, Ajax</h4>
+            <a href="#" class="btn project-card-certi-btn open-details" data-project="worksync">Details</a>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+            <h3>3. Note Web App</h3>
+            <h4>Tech: Python, Flask, MongoDB</h4>
+            <a href="#" class="btn project-card-certi-btn open-details" data-project="note">Details</a>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+            <h3>5. Tic-Tac-Toe Game</h3>
+            <h4>Tech: ASP .Net Core (C#), MySql, Bootstrap, JS, HTML, CSS, Ajax</h4>
+            <a href="#" class="btn project-card-certi-btn open-details" data-project="game">Details</a>
+          </div>
+        </div>
+        <div class="right-project-card">
+          <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <h3>2. Blog Site</h3>
+          <h4>Tech: Python, Flask, MongoDB</h4>
+          <a href="#" class="btn project-card-certi-btn open-details" data-project="blog">Details</a>
+          </div>
+
+          <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+            <h3>4. Music Player</h3>
+            <h4>Tech: ASP .Net Core (C#), MySql, Bootstrap, JS, HTML, CSS, Ajax</h4>
+            <a href="#" class="btn project-card-certi-btn open-details" data-project="music">Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- GLOBAL OVERLAY (outside cards) -->
+  <div class="project-card-overlay" id="globalOverlay">
+    <div class="project-card-details-box">
+      <div class="project-card-details-box-desc" id="overlayContent">
+        <!-- Injected content -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Skills section -->
+  <section id="skills" class="skills">
+    <div data-aos="fade-up">
+      <h2>Skills</h2>
+      <div class="skills-content">
+        <div class="skill-left" data-aos="fade-up" data-aos-delay="100">
+          <div class="skills-card">
+            <i class='bx bxl-net'></i>
+            <h3>.Net Core</h3>
+          </div>
+          <div class="skills-card">
+            <i class='bx bxl-python'></i>
+            <h3>Python</h3>
+          </div>
+          <div class="skills-card">
+            <i class='bx bx-code-alt'></i>
+            <h3>C</h3>
+          </div>
+          <div class="skills-card">
+            <i class='bx bxl-java'></i>
+            <h3>JAVA</h3>
+          </div>
+        </div>
+        <div class="skill-left" data-aos="fade-up" data-aos-delay="200">
+          <div class="skills-card">
+            <i class='bx bxl-html5'></i>
+            <h3>HTML</h3>
+          </div>
+          <div class="skills-card">
+            <i class='bx bxl-css3'></i>
+            <h3>CSS</h3>
+          </div>
+          <div class="skills-card">
+            <i class='bx bxl-javascript'></i>
+            <h3>JS</h3>
+          </div>
+          <div class="skills-card">
+            <i class='bx bxl-php'></i>
+            <h3>PHP</h3>
+          </div>
+        </div>
+        <div class="skill-left" data-aos="fade-up" data-aos-delay="300">
+          <div class="skills-card">
+            <i class='bx bxs-data'></i>
+            <h3>MySql</h3>
+          </div>
+          <div class="skills-card">
+            <i class='bx bxl-mongodb'></i>
+            <h3>MongoDB</h3>
+          </div>
+          <div class="skills-card">
+            <i class='bx bxl-flask'></i>
+            <h3>FLASK</h3>
+          </div>
+          <div class="skills-card">
+            <i class='bx bxl-jquery'></i>
+            <h3>jquery</h3>
+          </div>
+        </div>
+        <div class="skill-left" data-aos="fade-up" data-aos-delay="400">
+          <div class="skills-card">
+            <i class='bx bxs-file-json'></i>
+            <h3>json</h3>
+          </div>
+          <div class="skills-card">
+            <i class='bx bxl-sketch'></i>
+            <h3>Coreldrow</h3>
+          </div>
+          <div class="skills-card">
+            <i class='bx bxl-adobe'></i>
+            <h3>Photoshop</h3>
+          </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- education section -->
+  <section id="education" class="education">
+    <div data-aos="fade-up">
+      <h2>Education</h2>
+      <div class="education-card" data-aos="fade-right" data-aos-delay="100">
+        <h3>Bachelor's of Computer Engineering</h3>
+        <p>Gujarat Technological University (GTU)<br>
+            <b>SPI:10 &nbsp; CPI:8.72 &nbsp; CGPA:8.84</b>
+        </p>
+      </div>
+      <div class="education-card" data-aos="fade-right" data-aos-delay="200">
+        <h3>HSC</h3>
+        <p>Gujrat Secondary and Higher Sceconday Educational Board (GSEB) <br>
+            Persentage: <b>59</b></p>
+      </div>
+      <div class="education-card" data-aos="fade-right" data-aos-delay="300">
+        <h3>SSC</h3>
+        <p>Gujrat Secondary and Higher Sceconday Educational Board (GSEB) <br>
+            Persentage: <b>86.72</b></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact section -->
+  <section id="contact" class="contact">
+    <div data-aos="fade-up">
+      <h2>Contact Me</h2>
+      <form class="contact-form" id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Your Name</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Modal Structure
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close-btn" id="closeModalBtn">&times;</span>
+            <h2>Modal Title</h2>
+            <p>WorkSync Hub is a role-based employee management system built using <b>ASP.NET Core MVC</b>ASP.NET Core MVC with a layered architecture (Controller-Service-Repository). It streamlines HR and administrative tasks, including<b> role-based login, payroll management, leave management, and dynamic salary head assignment</b>. Key features include:
+              <br> - Secure <b>cookie-based authentication</b> and <b>role-based access control</b> for Admin, HR, and Employee roles
+              <br> - Dynamic <b>payroll generation</b>, approval workflow, and <b>PDF salary slips</b>
+              <br> - <b>Interactive dashboards</b> powered by <b>AdminLTE Bootstrap</b>
+              <br> - employee profile management and leave handling
+              <br> - with <b>SQL Server stored procedures</b> for efficient data operations
+              <br> - The chat feature was implemented using <b>SignalR</b>, which is the official real-time communication library for ASP.NET Core.
+              Hub is designed to optimize HR workflows, ensure secure access, and deliver a seamless user experience for organizations of all sizes.
+            </p>  
+            <button>Visit</button>    
+          </div>
+        </div> -->
+</body>
+</html>
