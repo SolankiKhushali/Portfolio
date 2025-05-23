@@ -719,10 +719,14 @@ footer {
   .project-card-overlay {
     width: 100vw;
     height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
   }
   .project-card-details-box {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 88%;
+    max-height: 88%;
   }
   .project-card-details-box {
     width: 90%;
@@ -835,4 +839,8 @@ footer {
 .education-card {
   max-width: 400px;
 }
+ /* Project styles */
+.project-card-details-box-desc {
+  font-size: .8rem;
+  }
 }
