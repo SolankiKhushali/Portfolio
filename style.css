@@ -15,6 +15,7 @@
   --bg1: #f1f5f9;
   --bg2: #ebebeb;
   --text: #0f172a;
+  --ex: #d8d9db;
   --accent: #38bdf8;
 }
 body {
@@ -31,6 +32,7 @@ a {
 .hamburger {
   display: none;
   font-size: 2rem;
+  font-weight: bolder;
   color:  var(--text);
   cursor: pointer;
 }
@@ -342,7 +344,7 @@ a {
 .projects{
   height: 140vh;
   background-color: var(--bg2);
-    justify-content: center;
+  justify-content: center;
   align-items: center;
   text-align: center;
 }
@@ -404,8 +406,8 @@ a {
   z-index: 1000;
 }
 .project-card-details-box {
-  background:var(--text);
-  color: var(--bg1);
+  background:var(--bg2);
+  color: var(--text);
   padding: .3rem;
   border-radius: 10px;
   max-width: 73%;
@@ -418,7 +420,7 @@ a {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 300;
-  background: #0f172a;
+  background: var(--bg1);
 	padding: 5px;
 	border: .25rem solid var(--accent);
 	border-radius: .5rem;
@@ -451,9 +453,9 @@ a {
   border-radius: 3px;
 }
 .project-card-details-box-btn:hover{
-  background-color: var(--text);
-  color: var(--bg1);
-  border: .2rem solid var(--text);
+  background-color: var(--bg1);
+  color: var(--text);
+  border: .2rem solid var(--ex);
   transform: scale(1.03);
 }
 .project-card-details-box-desc{
@@ -849,12 +851,12 @@ footer {
  padding-top: 30%;
 }
 .skill-left{
-  width: 100px;
+  width: 90px;
   float: left;
   padding: 1px;
 }
 .skills h3{
-  font-size: .7rem;
+  font-size: .6rem;
 }
 
 /* Education styles */
