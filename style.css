@@ -60,14 +60,20 @@ a {
 }
 .nav-links li a:hover {
   color: #38bdf8;
+  cursor: pointer;
 }
 .toggle-btn {
   background: none;
   border: 1px solid var(--accent);
   color: var(--accent);
   padding: 0.5rem 1rem;
+  font-weight: 500;
   cursor: pointer;
   border-radius: 5px;
+  transition: color 0.3s ease;
+}
+.toggle-btn:hover {
+  color: #38bdf8;
 }
 .hero,
 .about,
@@ -567,9 +573,9 @@ footer {
   width: 280px;
   height: 200px;
 }
-.projects{
+/* .projects{
   height: 180px;
-}
+} */
 }
 
 @media (max-width: 768px){
@@ -589,6 +595,7 @@ footer {
     color: #333;
     text-align: center;
     right: 25px;
+    font-weight: bold;
     border-radius: 5px;
   }
   .nav-links li a:hover {
@@ -597,6 +604,9 @@ footer {
   .toggle-btn {
   border: 1px solid #333;
   color: #333;
+  /* font-weight: bold; */
+      /* font-size: .9rem; */
+  font-weight: 750;
 }
   .nav-links {
     display: none;
@@ -759,6 +769,7 @@ footer {
   }
   .nav-links.active {
     width: 30%;
+    font-weight: bold;
   }
   .about-container {
     flex-direction: column; /* Stack items vertically */
@@ -840,7 +851,7 @@ footer {
   max-width: 400px;
 }
  /* Project styles */
-.project-card-details-box-desc {
-  font-size: .8rem;
+  .project-card-details-box-desc {
+    font-size: .8rem;
   }
 }
