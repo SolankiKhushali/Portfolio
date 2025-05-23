@@ -567,9 +567,9 @@ footer {
   width: 280px;
   height: 200px;
 }
-.projects{
+/* .projects{
   height: 150vh;
-}
+} */
 }
 
 @media (max-width: 768px){
