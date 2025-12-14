@@ -35,7 +35,8 @@
     <div class="hero-content">
       <!-- <div data-aos="fade-up"> -->
         <h1>Hello! I'm <span class="highlight">Khushali Solanki</span></h1>
-        <p>    <i class='bx bx-desktop'></i> Computer Engineer</p>
+        <h2>    <i class='bx bx-desktop'></i> Computer Engineer</h2>
+        <h3>    <i class='bx  bx-briefcase-alt-2'></i> Graduate Engineer Trainee at Guj Info Petro Ltd. (GIPL).</h3>
         <a href="#projects" class="btn">View My Work</a>
       <!-- </div> -->
     </div>
@@ -51,8 +52,8 @@
         </div>
         <div class="about-text">
           <p>
-            I'm an aspiring developer who enjoys building real-world projects and learning through hands-on experience. I’ve been exploring technologies like ASP.NET Core, Python, and Bootstrap, and I’m gradually becoming more confident with full-stack development. I recently worked on a few web apps that helped me understand how front-end and back-end systems connect. I’m still learning every day—debugging, improving my logic, and trying new tools as I go. I enjoy solving problems and turning ideas into working features, and I’m excited to keep growing as a developer.
-          </p>
+            I’m a growing software developer with hands-on experience in building real-world web applications using ASP.NET Core, SQL/PostgreSQL, and Bootstrap. I enjoy working across the full stack—connecting clean front-end interfaces with structured back-end logic, stored procedures, and role-based systems. <br>
+            Through projects and internships, I’ve learned to debug effectively, improve application flow, and turn requirements into working features. I’m continuously learning, experimenting with new tools, and strengthening my problem-solving skills to build reliable and scalable applications.          </p>
           <br>
           <h3 data-aos="fade-up" data-aos-delay="100" class="github_link"><a href="https://github.com/SolankiKhushali"><i class='bx bxl-github'></i> Check out my GitHub!</a></h3>
         </div>
@@ -67,13 +68,35 @@
     <div class="slider-container">
       <div class="slider" id="experienceSlider">
         <div class="slide">
+          <h3>GET at Guj Info Petro Limited, Gandhinagar</h3>
+          <p><b><i class='bx bxs-calendar'></i> August 2025 to Present...</b></p>
+          <p>
+            Progressed from Intern to <b>Graduate Engineer Trainee</b>,<br>working on real-world
+            .NET Core MVC full-stack modules<br>while strengthening problem-solving<br>
+            debugging, and system-level understanding.
+          </p>
+          <div class="career-growth">
+            <span class="label done"><h3>Intern</h3></span>
+
+            <div class="growth-track">
+              <div class="growth-progress"></div>
+            </div>
+
+            <span class="label active"><h3>GET</h3></span>
+          </div>
+
+          <p class="growth-caption">
+            Learning -> Building -> Growing 
+          </p>
+
+        </div>
+        <div class="slide">
           <h3>Internship at Guj Info Petro Limited, Gandhinagar, Gujarat</h3>
-          <p><b><i class='bx bxs-calendar'></i>1<sup>st</sup> March 2025 to 31<sub>st</sub> May 2025</b></p>
+          <p><b><i class='bx bxs-calendar'></i> March 2025 to May 2025</b></p>
           <p>as an Intern, I gained hands-on experience in .Net Core MVC Full Stack development, <br>
             enhancing my technical skills and contributing to meaningful projects</p>
           <a href="#" class="btn certi-btn">Certificate</a>
-          <div class="overlay">
-            <div class="details-box">
+            <div class="certi-data" hidden>
               <img src="gipl-img.png" alt="certi" />            
               <div class="details-box-desc" >
                 <p>
@@ -83,9 +106,8 @@
                   </b>  
                 </p>
                 <a href="https://github.com/SolankiKhushali?tab=repositories" class="details-box-btn" data-aos="fade-up" data-aos-delay="100">Show Projects</a>
-                <a href="#" class="go-back-btn details-box-btn" data-aos="fade-up" data-aos-delay="400">Go Back</a>
+                  <a href="#" class="go-back-btn details-box-btn" data-aos="fade-up" data-aos-delay="400">Go Back</a>
               </div> 
-          </div>
           </div>
         </div>
         <div class="slide">
@@ -94,8 +116,7 @@
           <p>as an Intern, I gained hands-on experience in Python Full Stack development, <br>
             enhancing my technical skills and contributing to meaningful projects</p>
           <a href="#" class="btn certi-btn">Certificate</a>
-          <div class="overlay">
-            <div class="details-box">
+            <div class="certi-data" hidden>
               <img src="OMT-certi-img.png" alt="certi" />            
               <div class="details-box-desc" >
                 <p>
@@ -108,7 +129,6 @@
                 <a href="#" class="go-back-btn details-box-btn" data-aos="fade-up" data-aos-delay="400">Go Back</a>
               </div> 
           </div>
-          </div>
         </div>
         <div class="slide">
           <h3>Internship at Devkishan Computer Pvt Ltd, Amreli, Gujarat</h3>
@@ -116,8 +136,7 @@
           <p>Built Logo Designs, Web Designs, and Learn Adobe Photoshop Editing for <br>
             Enhancing my designing skills.</p>
           <a href="#" class="btn certi-btn">Certificate</a>
-          <div class="overlay">
-            <div class="details-box">
+            <div class="certi-data" hidden>
               <img src="web-designing-certi-img.jpg" alt="certi" />            
               <div class="details-box-desc" >
                 <p>
@@ -129,10 +148,14 @@
                 <a href="https://github.com/SolankiKhushali?tab=repositories" class="details-box-btn" data-aos="fade-up" data-aos-delay="100">Show Projects</a>
                 <a href="#" class="go-back-btn details-box-btn" data-aos="fade-up" data-aos-delay="400">Go Back</a>
               </div> 
-            </div>
           </div>
         </div>
       </div>
+      <div id="experienceOverlay" class="overlay">
+  <div class="details-box">
+    <div id="overlayContent"></div>
+  </div>
+</div>
       <button class="nav prev" onclick="prevSlide()"><b><i class='bx bx-chevron-left'></i></b></button>
       <button class="nav next" onclick="nextSlide()"><b><i class='bx bx-chevron-right'></i></b></button>
     </div>
@@ -160,20 +183,20 @@
 
           <div class="project-card" data-aos="fade-up" data-aos-delay="500">
             <h3>5. Tic-Tac-Toe Game</h3>
-            <h4>Tech: ASP .Net Core (C#), MySql, Bootstrap, JS, HTML, CSS, Ajax</h4>
+            <h4>Tech: Python</h4>
             <a href="#" class="btn project-card-certi-btn open-details" data-project="game">Details</a>
           </div>
         </div>
         <div class="right-project-card">
           <div class="project-card" data-aos="fade-up" data-aos-delay="200">
           <h3>2. Blog Site</h3>
-          <h4>Tech: Python, Flask, MongoDB</h4>
+          <h4>Tech: JavaScript, CSS, HTML</h4>
           <a href="#" class="btn project-card-certi-btn open-details" data-project="blog">Details</a>
           </div>
 
           <div class="project-card" data-aos="fade-up" data-aos-delay="400">
             <h3>4. Music Player</h3>
-            <h4>Tech: ASP .Net Core (C#), MySql, Bootstrap, JS, HTML, CSS, Ajax</h4>
+            <h4>Tech: JavaScript, HTML, CSS</h4>
             <a href="#" class="btn project-card-certi-btn open-details" data-project="music">Details</a>
           </div>
         </div>
@@ -183,7 +206,7 @@
   <!-- GLOBAL OVERLAY (outside cards) -->
   <div class="project-card-overlay" id="globalOverlay">
     <div class="project-card-details-box">
-      <div class="project-card-details-box-desc" id="overlayContent">
+      <div class="project-card-details-box-desc" id="overlayContentforProject">
         <!-- Injected content -->
       </div>
     </div>
@@ -236,12 +259,12 @@
             <h3>MySql</h3>
           </div>
           <div class="skills-card">
-            <i class='bx bxl-mongodb'></i>
-            <h3>MongoDB</h3>
+            <i class='bx bxs-data'></i>
+            <h3>PosgreSql</h3>
           </div>
           <div class="skills-card">
-            <i class='bx bxl-flask'></i>
-            <h3>FLASK</h3>
+            <i class='bx bxl-mongodb'></i>
+            <h3>MongoDB</h3>
           </div>
           <div class="skills-card">
             <i class='bx bxl-jquery'></i>
@@ -252,6 +275,10 @@
           <div class="skills-card">
             <i class='bx bxs-file-json'></i>
             <h3>json</h3>
+          </div>
+          <div class="skills-card">
+            <i class='bx bxl-flask'></i>
+            <h3>FLASK</h3>
           </div>
           <div class="skills-card">
             <i class='bx bxl-sketch'></i>
