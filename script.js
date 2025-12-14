@@ -1,116 +1,101 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // AOS init
+
   AOS.init();
 
-  // Theme Toggle
-  document.getElementById("themeToggle").addEventListener("click", () => {
-    document.body.classList.toggle("light-mode");
-  });
+  const themeToggle = document.getElementById("themeToggle");
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("light-mode");
+    });
+  }
 
-  // EmailJS Init
-  (function () {
-    emailjs.init("07sQdsnEO7o7KsVH6"); // Replace with your EmailJS public key
-  })();
+  emailjs.init("07sQdsnEO7o7KsVH6");
 
-  // Form Submission
   const form = document.getElementById("contact-form");
   if (form) {
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
 
-      emailjs.sendForm('khushali_gmail_service', 'template_kjom0kn', this)
-        .then(() => {
-          alert("Message sent!");
-          this.reset();
-        }, (error) => {
-          alert("Failed to send message.");
-          console.error(error);
-        });
+      emailjs.sendForm(
+        "khushali_gmail_service",
+        "template_kjom0kn",
+        this
+      ).then(() => {
+        alert("Message sent!");
+        this.reset();
+      }).catch(err => {
+        alert("Failed to send message");
+        console.error(err);
+      });
     });
   }
 
-});
-function toggleMenu() {
-    const nav = document.getElementById("nav-links");
-    nav.classList.toggle("active");
+  // Mobile menu
+  window.toggleMenu = function () {
+    document.getElementById("nav-links").classList.toggle("active");
+  };
+
+    //  Experience Slider
+  let currentSlide = 0;
+  const slider = document.getElementById("experienceSlider");
+  const slides = document.querySelectorAll(".slide");
+  const totalSlides = slides.length;
+
+  function showSlide(index) {
+    if (index >= totalSlides) currentSlide = 0;
+    else if (index < 0) currentSlide = totalSlides - 1;
+    else currentSlide = index;
+
+    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
   }
-// Slider Logic
- let currentSlide = 0;
-const slider = document.getElementById("experienceSlider");
-const slides = document.querySelectorAll(".slide");
-const totalSlides = slides.length;
 
-function showSlide(index) {
-  if (index >= totalSlides) currentSlide = 0;
-  else if (index < 0) currentSlide = totalSlides - 1;
-  else currentSlide = index;
+  window.prevSlide = () => showSlide(currentSlide - 1);
+  window.nextSlide = () => showSlide(currentSlide + 1);
 
-  slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-}
+  showSlide(currentSlide);
 
-function prevSlide() {
-  showSlide(currentSlide - 1);
-}
+  let autoSlide = setInterval(() => showSlide(currentSlide + 1), 6000);
 
-function nextSlide() {
-  showSlide(currentSlide + 1);
-}
-
-// Optional: Auto Slide
-let autoSlide = setInterval(() => showSlide(currentSlide + 1), 6000);
-
-const sliderContainer = document.querySelector(".slider-container");
-if (sliderContainer) {
-  sliderContainer.addEventListener("mouseenter", () => clearInterval(autoSlide));
-  sliderContainer.addEventListener("mouseleave", () => {
-    autoSlide = setInterval(() => showSlide(currentSlide + 1), 6000);
-  });
-}
-
-// Initialize
-showSlide(currentSlide);
-
-// For Sliders overlay
-  // Hide all overlays
-    function closeAllOverlays() {
-      document.querySelectorAll('.overlay').forEach(overlay => {
-        overlay.style.display = 'none';
-      });
-    }
-  
-    // Handle 'Certificate' clicks
-    document.querySelectorAll('.certi-btn').forEach(button => {
-      button.addEventListener('click', (event) => {
-        event.preventDefault();
-        closeAllOverlays(); // Hide any open overlay first
-        const slide = button.closest('.slide');
-        const overlay = slide.querySelector('.overlay');
-        overlay.style.display = 'flex';
-      });
+  const sliderContainer = document.querySelector(".slider-container");
+  if (sliderContainer) {
+    sliderContainer.addEventListener("mouseenter", () => clearInterval(autoSlide));
+    sliderContainer.addEventListener("mouseleave", () => {
+      autoSlide = setInterval(() => showSlide(currentSlide + 1), 6000);
     });
+  }
 
-  // Handle 'Go Back' clicks
-    document.querySelectorAll('.go-back-btn').forEach(button => {
-      button.addEventListener('click', (event) => {
-        event.preventDefault();
-        const slide = button.closest('.slide');
-        const overlay = slide.querySelector('.overlay');
-        overlay.style.display = 'none';
-      });
-    });
-
-  // Close overlay on background click
-    document.querySelectorAll('.overlay').forEach(overlay => {
-      overlay.addEventListener('click', (event) => {
-        if (event.target === overlay) {
-          overlay.style.display = 'none';
-        }
-      });
-  });
-
-// For Project card Overlays
-  const overlay = document.getElementById("globalOverlay");
+    //  EXPERIENCE CERTIFICATE OVERLAY
+  const expOverlay = document.getElementById("experienceOverlay");
   const overlayContent = document.getElementById("overlayContent");
+
+  document.querySelectorAll(".certi-btn").forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.preventDefault();
+
+      const slide = btn.closest(".slide");
+      const certiData = slide.querySelector(".certi-data");
+
+      overlayContent.innerHTML = certiData.innerHTML;
+      expOverlay.style.display = "flex";
+    });
+  });
+
+expOverlay.addEventListener("click", e => {
+  // Close when clicking Go Back button
+  if (e.target.classList.contains("go-back-btn")) {
+    e.preventDefault();
+    expOverlay.style.display = "none";
+  }
+
+  // Close when clicking outside the card
+  if (e.target === expOverlay) {
+    expOverlay.style.display = "none";
+  }
+});
+
+    // For Project card Overlays
+  const overlay = document.getElementById("globalOverlay");
+  const overlayContentforProject = document.getElementById("overlayContentforProject");
   const closeBtn = document.getElementById("closeOverlay");
 
   const projectData = {
@@ -168,7 +153,7 @@ showSlide(currentSlide);
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const key = btn.dataset.project;
-      overlayContent.innerHTML = projectData[key] || "<p>No details found.</p>";
+      overlayContentforProject.innerHTML = projectData[key] || "<p>No details found.</p>";
       overlay.style.display = "flex";
     });
   });
@@ -177,5 +162,6 @@ showSlide(currentSlide);
     e.preventDefault();
     overlay.style.display = "none";
   }
-});
 
+});
+});
